@@ -2,6 +2,8 @@ from fastapi import FastAPI, HTTPException
 import os, psycopg
 from psycopg.rows import dict_row
 from app.db_migration import migrate_schema, seed_sample_data
+from dotenv import load_dotenv
+load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
